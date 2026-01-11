@@ -10,16 +10,18 @@ CARDS_PER_ROW = 5
 
 st.set_page_config(page_title=PAGE_TITLE, layout="wide", page_icon="🦖")
 
-# --- 🛠️ CSS STYLING ---
+# --- 🛠️ CSS STYLING (Dark Mode Friendly) ---
 st.markdown("""
 <style>
     .card-container {
-        background-color: white; border: 1px solid #ddd;
+        background-color: var(--secondary-background-color); /* ใช้สีตาม Theme ของ Streamlit */
+        border: 1px solid rgba(250, 250, 250, 0.1);
         border-radius: 10px; padding: 10px; text-align: center;
-        margin-bottom: 10px; height: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        margin-bottom: 10px; height: 100%; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
     .stock-badge {
-        background-color: #e3f2fd; color: #1565c0;
+        background-color: #1e88e5; color: white; /* ปรับสีป้ายสต็อกให้สดขึ้น */
         padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: bold;
         margin-bottom: 5px; display: inline-block;
     }
